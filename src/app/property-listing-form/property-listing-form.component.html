@@ -1,0 +1,26 @@
+<article>
+    <section class="listing-apply">
+        <h2 class="section-heading">Apply now to live here</h2>
+        <form [formGroup]="applyForm" (submit)="submitApplication()">
+            <div>
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" formControlName="firstName" />
+
+            <label for="last-name">Last Name</label>
+            <input id="last-name" type="text" formControlName="lastName" />
+
+            </div>
+            <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" formControlName="email" />
+            </div>
+            <label for="start-date">Start date</label>
+            <input type="date" id="start" name="rental-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+            
+            <label for="end-date">End date</label>
+            <intput id="end-date" type="date" formControlName="end-date"/>
+
+            <button type="submit" class="primary">Rent property</button>
+        </form>
+    </section>
+</article>
