@@ -1,26 +1,46 @@
 <article>
-    <section class="listing-apply">
-        <h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
+    <section class="listing-publish">
+        <h2 class="section-heading">Create a listing for your property</h2>
+        <form [formGroup]="listingForm" (submit)="submitApplication($event)">
             <div>
-            <label for="first-name">First Name</label>
-            <input id="first-name" type="text" formControlName="firstName" />
-
-            <label for="last-name">Last Name</label>
-            <input id="last-name" type="text" formControlName="lastName" />
-
+                <label for="property-name">Name</label>
+                <input id="property-name" type="text" formControlName="propertyName" />
             </div>
             <div>
-            <label for="email">Email</label>
-            <input id="email" type="email" formControlName="email" />
+                <label for="city">City</label>
+                <input id="property-city" type="text" formControlName="property-city" />
             </div>
-            <label for="start-date">Start date</label>
-            <input type="date" id="start" name="rental-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
-            
-            <label for="end-date">End date</label>
-            <intput id="end-date" type="date" formControlName="end-date"/>
+            <div>
+                <label for="state">Voivoideship</label>
+                <input id="property-state" type="text" formControlName="property-state" />
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input id="property-price" type="number" min="0" formControlName="property-price" />
+            </div>
+            <div>
+                <label for="photos">Property photos</label>
+                <input id="property-photos" type="file" multiple accept="image/*" formControlName="property-photos" />
+            </div>
+            <div>
+                <label for="area">Property area</label>
+                <input id="property-area" type="number" min="0" formControlName="property-area" />
+            </div>
+            <div>
+                <label for="number-of-bedrooms">Number of bedrooms</label>
+                <input id="number-of-bedrooms" type="number" min="0" formControlName="number-of-bedrooms" />
+            </div>
+            <div>
+                <label for="number-of-bathrooms">Number of bathrooms</label>
+                <input id="number-of-bathrooms" type="number" min="0" formControlName="number-of-bathrooms" />
+            </div>
+            <div>
+                <label for="wifi">Free WiFi available</label>
+                <input id="wifi" type="checkbox" formControlName="wifi" />
+            </div>
 
-            <button type="submit" class="primary">Rent property</button>
+
+            <button type="submit" class="primary">Create a listing</button>
         </form>
     </section>
 </article>
