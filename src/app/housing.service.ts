@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {HousingLocation} from './housinglocation';
+import { Injectable } from '@angular/core';
+import { HousingLocation } from './housinglocation';
+
 @Injectable({
   providedIn: 'root',
 })
 export class HousingService {
-  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
   url = 'http://localhost:3000/locations';
 
   async getAllHousingLocations(): Promise<HousingLocation[]> {
@@ -17,9 +17,25 @@ export class HousingService {
     return (await data.json()) ?? {};
   }
 
-  submitApplication(firstName: string, lastName: string, email: string) {
-    console.log(
-      `Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`,
-    );
+  async submitPropertyListing(propertyData: any): Promise<void> {
+    try {
+      const response = await fetch(this.url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(propertyData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit property listing');
+      }
+
+      console.log('Property listing submitted successfully:', propertyData);
+      alert('Property listing created successfully!');
+    } catch (error) {
+      console.error('Error submitting property listing:', error);
+      alert('Failed to create listing. Please try again.');
+    }
   }
 }
