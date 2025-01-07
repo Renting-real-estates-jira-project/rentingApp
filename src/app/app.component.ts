@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {HomeComponent} from './home/home.component';
 import {RouterModule} from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   imports: [HomeComponent, RouterModule],
