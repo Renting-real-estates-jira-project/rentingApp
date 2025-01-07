@@ -30,8 +30,7 @@ typings/
 e2e/*.js
 e2e/*.map
 
-*.tsbuildinfo
-.angular
+.angular/cache/19.0.5/first-app/.tsbuildinfo
 
 # System Files
 .DS_Store/
