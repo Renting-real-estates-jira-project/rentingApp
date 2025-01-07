@@ -7,14 +7,40 @@
   justify-content: space-around;
 }
 
-input[type="text"] {
-  border: solid 1px var(--primary-color);
-  padding: 10px;
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
   border-radius: 8px;
-  margin-right: 4px;
-  display: inline-block;
-  width: 30%;
 }
+
+.filter-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 0.4rem;
+  padding-top: 0.4rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.amenities {
+  display: flex;
+  gap: 2rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
 
 button {
   padding: 10px;

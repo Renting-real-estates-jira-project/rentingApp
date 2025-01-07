@@ -2,115 +2,123 @@
   "locations": [
     {
       "id": "0",
-      "name": "Acme Fresh Start Housing",
-      "city": "Chicago",
-      "state": "IL",
+      "name": "Nowoczesne Osiedle Startowe",
+      "city": "Warszawa",
+      "state": "Mazowieckie",
       "photo": "https://angular.dev/assets/images/tutorials/common/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-      "availableUnits": 4,
       "wifi": true,
-      "laundry": true
+      "price": 200000,
+      "area": 70,
+      "number_of_bedrooms": 3,
+      "number_of_bathrooms": 2
     },
     {
       "id": "1",
-      "name": "A113 Transitional Housing",
-      "city": "Santa Monica",
-      "state": "CA",
+      "name": "Nowe mieszkanie w Gdańsku",
+      "city": "Gdańsk",
+      "state": "Pomorskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": 0,
       "wifi": false,
-      "laundry": true
+      "price": 150000,
+      "area": 65,
+      "number_of_bedrooms": 2,
+      "number_of_bathrooms": 1
     },
     {
       "id": "2",
-      "name": "Warm Beds Housing Support",
-      "city": "Juneau",
-      "state": "AK",
+      "name": "Dom w zaciszu",
+      "city": "Białystok",
+      "state": "Podlaskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-      "availableUnits": 1,
       "wifi": false,
-      "laundry": false
+      "price": 180000,
+      "area": 85,
+      "number_of_bedrooms": 3,
+      "number_of_bathrooms": 1
     },
     {
       "id": "3",
-      "name": "Homesteady Housing",
-      "city": "Chicago",
-      "state": "IL",
+      "name": "Bezpieczne osiedle",
+      "city": "Kraków",
+      "state": "Małopolskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
-      "availableUnits": 1,
       "wifi": true,
-      "laundry": false
+      "price": 250000,
+      "area": 95,
+      "number_of_bedrooms": 4,
+      "number_of_bathrooms": 2
     },
     {
       "id": "4",
-      "name": "Happy Homes Group",
-      "city": "Gary",
-      "state": "IN",
+      "name": "Grupa Mieszkań Szczęśliwych Domów",
+      "city": "Katowice",
+      "state": "Śląskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
-      "availableUnits": 1,
       "wifi": true,
-      "laundry": false
+      "price": 220000,
+      "area": 80,
+      "number_of_bedrooms": 3,
+      "number_of_bathrooms": 2
     },
     {
       "id": "5",
-      "name": "Hopeful Apartment Group",
-      "city": "Oakland",
-      "state": "CA",
+      "name": "Mieszkania Nadzieja w Poznaniu",
+      "city": "Poznań",
+      "state": "Wielkopolskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-      "availableUnits": 2,
       "wifi": true,
-      "laundry": true
+      "price": 210000,
+      "area": 75,
+      "number_of_bedrooms": 3,
+      "number_of_bathrooms": 1
     },
     {
       "id": "6",
-      "name": "Seriously Safe Towns",
-      "city": "Oakland",
-      "state": "CA",
+      "name": "Bezpieczne Osiedle Wrocław",
+      "city": "Wrocław",
+      "state": "Dolnośląskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
-      "availableUnits": 5,
       "wifi": true,
-      "laundry": true
+      "price": 230000,
+      "area": 85,
+      "number_of_bedrooms": 3,
+      "number_of_bathrooms": 2
     },
     {
       "id": "7",
-      "name": "Hopeful Housing Solutions",
-      "city": "Oakland",
-      "state": "CA",
+      "name": "Mieszkania dla Rodzin w Lublinie",
+      "city": "Lublin",
+      "state": "Lubelskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-GGupkreKwxA-unsplash.jpg",
-      "availableUnits": 2,
       "wifi": true,
-      "laundry": true
+      "price": 200000,
+      "area": 70,
+      "number_of_bedrooms": 2,
+      "number_of_bathrooms": 1
     },
     {
       "id": "8",
-      "name": "Seriously Safe Towns",
-      "city": "Oakland",
-      "state": "CA",
+      "name": "Osiedle Bezpieczne Miasta",
+      "city": "Łódź",
+      "state": "Łódzkie",
       "photo": "https://angular.dev/assets/images/tutorials/common/saru-robert-9rP3mxf8qWI-unsplash.jpg",
-      "availableUnits": 10,
       "wifi": false,
-      "laundry": false
+      "price": 160000,
+      "area": 60,
+      "number_of_bedrooms": 2,
+      "number_of_bathrooms": 1
     },
     {
       "id": "9",
-      "name": "Capital Safe Towns",
-      "city": "Portland",
-      "state": "OR",
+      "name": "Willa Szczecin",
+      "city": "Szczecin",
+      "state": "Zachodniopomorskie",
       "photo": "https://angular.dev/assets/images/tutorials/common/webaliser-_TPTXZd9mOo-unsplash.jpg",
-      "availableUnits": 6,
       "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "fa7c",
-      "propertyName": "abc",
-      "propertyCity": "",
-      "propertyState": "",
-      "propertyPrice": 0,
-      "propertyPhotos": [],
-      "propertyArea": 0,
-      "numberOfBedrooms": 0,
-      "numberOfBathrooms": 0,
-      "wifi": false
+      "price": 300000,
+      "area": 120,
+      "number_of_bedrooms": 4,
+      "number_of_bathrooms": 3
     }
   ]
 }

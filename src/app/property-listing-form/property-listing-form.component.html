@@ -1,46 +1,135 @@
-<article>
-    <section class="listing-publish">
-        <h2 class="section-heading">Create a listing for your property</h2>
-        <form [formGroup]="listingForm" (submit)="submitApplication($event)">
-            <div>
-                <label for="property-name">Name</label>
-                <input id="property-name" type="text" formControlName="propertyName" />
+<div class="listing-form-container">
+    <header class="form-header">
+      <h1>List Your Property</h1>
+      <p class="subtitle">Fill in the details below to create your property listing</p>
+    </header>
+  
+    <form [formGroup]="listingForm" (submit)="submitApplication($event)" class="listing-form">
+      <div class="form-section">
+        <h2>Basic Information</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="propertyName">Property Name</label>
+            <input
+              id="propertyName"
+              type="text"
+              formControlName="propertyName"
+              placeholder="Enter property name"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="propertyCity">City</label>
+            <input
+              id="propertyCity"
+              type="text"
+              formControlName="propertyCity"
+              placeholder="Enter city"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="propertyState">State</label>
+            <input
+              id="propertyState"
+              type="text"
+              formControlName="propertyState"
+              placeholder="Enter state"
+              required
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="propertyPrice">Price</label>
+            <div class="price-input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input
+                id="propertyPrice"
+                type="number"
+                formControlName="propertyPrice"
+                placeholder="Enter price"
+                required
+                min="0"
+              />
             </div>
-            <div>
-                <label for="city">City</label>
-                <input id="property-city" type="text" formControlName="property-city" />
-            </div>
-            <div>
-                <label for="state">Voivoideship</label>
-                <input id="property-state" type="text" formControlName="property-state" />
-            </div>
-            <div>
-                <label for="price">Price</label>
-                <input id="property-price" type="number" min="0" formControlName="property-price" />
-            </div>
-            <div>
-                <label for="photos">Property photos</label>
-                <input id="property-photos" type="file" multiple accept="image/*" formControlName="property-photos" />
-            </div>
-            <div>
-                <label for="area">Property area</label>
-                <input id="property-area" type="number" min="0" formControlName="property-area" />
-            </div>
-            <div>
-                <label for="number-of-bedrooms">Number of bedrooms</label>
-                <input id="number-of-bedrooms" type="number" min="0" formControlName="number-of-bedrooms" />
-            </div>
-            <div>
-                <label for="number-of-bathrooms">Number of bathrooms</label>
-                <input id="number-of-bathrooms" type="number" min="0" formControlName="number-of-bathrooms" />
-            </div>
-            <div>
-                <label for="wifi">Free WiFi available</label>
-                <input id="wifi" type="checkbox" formControlName="wifi" />
-            </div>
-
-
-            <button type="submit" class="primary">Create a listing</button>
-        </form>
-    </section>
-</article>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-section">
+        <h2>Property Details</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="propertyArea">Area (m²)</label>
+            <input
+              id="propertyArea"
+              type="number"
+              formControlName="propertyArea"
+              placeholder="Enter area"
+              required
+              min="0"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="numberOfBedrooms">Bedrooms</label>
+            <input
+              id="numberOfBedrooms"
+              type="number"
+              formControlName="numberOfBedrooms"
+              placeholder="Number of bedrooms"
+              required
+              min="0"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="numberOfBathrooms">Bathrooms</label>
+            <input
+              id="numberOfBathrooms"
+              type="number"
+              formControlName="numberOfBathrooms"
+              placeholder="Number of bathrooms"
+              required
+              min="0"
+            />
+          </div>
+        </div>
+  
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              formControlName="wifi"
+            />
+            <span class="checkbox-text">WiFi Available</span>
+          </label>
+        </div>
+      </div>
+  
+      <div class="form-section">
+        <h2>Property Photos</h2>
+        <div class="form-group file-upload">
+          <label for="propertyPhotos" class="file-upload-label">
+            <span class="upload-icon">📸</span>
+            <span class="upload-text">Click to upload photos</span>
+            <span class="upload-hint">Supported formats: JPG, PNG (max 5MB)</span>
+          </label>
+          <input
+            id="propertyPhotos"
+            type="file"
+            (change)="handleFileInput($event)"
+            accept="image/*"
+            multiple
+            class="file-input"
+          />
+        </div>
+      </div>
+  
+      <div class="form-actions">
+        <button type="submit" class="submit-button">List Property</button>
+      </div>
+    </form>
+  </div>
