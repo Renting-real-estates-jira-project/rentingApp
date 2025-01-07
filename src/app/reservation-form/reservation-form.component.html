@@ -1,0 +1,46 @@
+<article>
+    <section class="listing-publish">
+        <h2 class="section-heading">Create a listing for your property</h2>
+        <form [formGroup]="listingForm" (submit)="submitApplication($event)">
+            <div>
+                <label for="property-name">Name</label>
+                <input id="property-name" type="text" formControlName="propertyName" />
+            </div>
+            <div>
+                <label for="city">City</label>
+                <input id="property-city" type="text" formControlName="property-city" />
+            </div>
+            <div>
+                <label for="state">Voivoideship</label>
+                <input id="property-state" type="text" formControlName="property-state" />
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input id="property-price" type="number" min="0" formControlName="property-price" />
+            </div>
+            <div>
+                <label for="photos">Property photos</label>
+                <input id="property-photos" type="file" multiple accept="image/*" formControlName="property-photos" />
+            </div>
+            <div>
+                <label for="area">Property area</label>
+                <input id="property-area" type="number" min="0" formControlName="property-area" />
+            </div>
+            <div>
+                <label for="number-of-bedrooms">Number of bedrooms</label>
+                <input id="number-of-bedrooms" type="number" min="0" formControlName="number-of-bedrooms" />
+            </div>
+            <div>
+                <label for="number-of-bathrooms">Number of bathrooms</label>
+                <input id="number-of-bathrooms" type="number" min="0" formControlName="number-of-bathrooms" />
+            </div>
+            <div>
+                <label for="wifi">Free WiFi available</label>
+                <input id="wifi" type="checkbox" formControlName="wifi" />
+            </div>
+
+
+            <button type="submit" class="primary">Create a listing</button>
+        </form>
+    </section>
+</article>

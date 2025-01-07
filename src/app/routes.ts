@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {DetailsComponent} from './details/details.component';
 import { PropertyListingFormComponent } from './property-listing-form/property-listing-form.component';
+import { ReservationFormComponent } from './reservation-form/reservation-form.component';
 
 
 const routeConfig: Routes = [
@@ -19,6 +20,11 @@ const routeConfig: Routes = [
     path: 'propertylisting',
     component: PropertyListingFormComponent,
     title: 'Property listing form'
+  },
+  {
+    path: 'reservation',
+    component:  ReservationFormComponent,
+    title: 'Reservation form'
   },
 ];
 export default routeConfig;

@@ -1,9 +1,10 @@
-import {Component, inject} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {ActivatedRoute} from '@angular/router';
-import {HousingService} from '../housing.service';
-import {HousingLocation} from '../housinglocation';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { HousingService } from '../housing.service';
+import { HousingLocation } from '../housinglocation';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-details',
   imports: [CommonModule, ReactiveFormsModule],
@@ -22,10 +23,19 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
       <section class="listing-features">
         <h2 class="section-heading">About this housing location</h2>
         <ul>
-          <li>Units available: {{ housingLocation?.availableUnits }}</li>
+          <li>Price: {{ housingLocation?.price }}</li>
+          <li>Area: {{ housingLocation?.area }}</li>
+          <li>Number of bedrooms: {{ housingLocation?.number_of_bedrooms }}</li>
+          <li>Number of bathrooms: {{ housingLocation?.number_of_bathrooms }}</li>
           <li>Does this location have wifi: {{ housingLocation?.wifi }}</li>
-          <li>Does this location have laundry: {{ housingLocation?.laundry }}</li>
         </ul>
+      </section>
+
+
+      <section class="reserve-section" style="margin-top: 20px;">
+        <button class="reservation_form" [routerLink]="['reservation']">
+      reserve this property
+    </button>
       </section>
     </article>
   `,
@@ -35,11 +45,17 @@ export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService = inject(HousingService);
   housingLocation: HousingLocation | undefined;
-  
+
   constructor() {
     const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
     this.housingService.getHousingLocationById(housingLocationId).then((housingLocation) => {
       this.housingLocation = housingLocation;
     });
+  }
+
+  onReserve(): void {
+    if (this.housingLocation) {
+      console.log(`Property reserved: ${this.housingLocation.name}`);
+    }
   }
 }
