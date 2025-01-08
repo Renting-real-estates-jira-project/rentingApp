@@ -1,24 +1,23 @@
-import {Routes} from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {DetailsComponent} from './details/details.component';
-import { PropertyListingFormComponent } from './property-listing-form/property-listing-form.component';
-
+import { Routes } from "@angular/router";
+import { HomeComponent } from "./home/home.component";
+import { DetailsComponent } from "./details/details.component";
+import { PropertyListingFormComponent } from "./property-listing-form/property-listing-form.component";
 
 const routeConfig: Routes = [
   {
-    path: '',
+    path: "",
     component: HomeComponent,
-    title: 'Home page',
+    title: "Home page",
   },
   {
-    path: 'details/:id',
+    path: "details/:id",
     component: DetailsComponent,
-    title: 'Home details',
+    title: "Home details",
   },
   {
-    path: 'propertylisting',
+    path: "propertylisting",
     component: PropertyListingFormComponent,
-    title: 'Property listing form'
+    title: "Property listing form",
   },
 ];
 export default routeConfig;
