@@ -5,9 +5,11 @@
       "name": "Nowoczesne Osiedle Startowe",
       "city": "Warszawa",
       "state": "Mazowieckie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+      "photos": [
+        "/public/uploads/1.jpeg"
+      ],
       "wifi": true,
-      "price": 200000,
+      "price": 2000,
       "area": 70,
       "number_of_bedrooms": 3,
       "number_of_bathrooms": 2
@@ -17,9 +19,11 @@
       "name": "Nowe mieszkanie w Gdańsku",
       "city": "Gdańsk",
       "state": "Pomorskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+      "photos": [
+        "/public/uploads/3.jpg"
+      ],
       "wifi": false,
-      "price": 150000,
+      "price": 1500,
       "area": 65,
       "number_of_bedrooms": 2,
       "number_of_bathrooms": 1
@@ -29,9 +33,11 @@
       "name": "Dom w zaciszu",
       "city": "Białystok",
       "state": "Podlaskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+      "photos": [
+        "/public/uploads/2.jpeg"
+      ],
       "wifi": false,
-      "price": 180000,
+      "price": 1800,
       "area": 85,
       "number_of_bedrooms": 3,
       "number_of_bathrooms": 1
@@ -41,9 +47,11 @@
       "name": "Bezpieczne osiedle",
       "city": "Kraków",
       "state": "Małopolskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
+      "photos": [
+        "/public/uploads/4.jpg"
+      ],
       "wifi": true,
-      "price": 250000,
+      "price": 2500,
       "area": 95,
       "number_of_bedrooms": 4,
       "number_of_bathrooms": 2
@@ -53,9 +61,11 @@
       "name": "Grupa Mieszkań Szczęśliwych Domów",
       "city": "Katowice",
       "state": "Śląskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+      "photos": [
+        "/public/uploads/5.jpg"
+      ],
       "wifi": true,
-      "price": 220000,
+      "price": 2200,
       "area": 80,
       "number_of_bedrooms": 3,
       "number_of_bathrooms": 2
@@ -65,9 +75,11 @@
       "name": "Mieszkania Nadzieja w Poznaniu",
       "city": "Poznań",
       "state": "Wielkopolskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+      "photos": [
+        "/public/uploads/6.jpg"
+      ],
       "wifi": true,
-      "price": 210000,
+      "price": 2100,
       "area": 75,
       "number_of_bedrooms": 3,
       "number_of_bathrooms": 1
@@ -77,9 +89,11 @@
       "name": "Bezpieczne Osiedle Wrocław",
       "city": "Wrocław",
       "state": "Dolnośląskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+      "photos": [
+        "/public/uploads/7.jpg"
+      ],
       "wifi": true,
-      "price": 230000,
+      "price": 2300,
       "area": 85,
       "number_of_bedrooms": 3,
       "number_of_bathrooms": 2
@@ -89,21 +103,25 @@
       "name": "Mieszkania dla Rodzin w Lublinie",
       "city": "Lublin",
       "state": "Lubelskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-GGupkreKwxA-unsplash.jpg",
+      "photos": [
+        "/public/uploads/8.jpg"
+      ],
       "wifi": true,
-      "price": 200000,
+      "price": 2000,
       "area": 70,
       "number_of_bedrooms": 2,
       "number_of_bathrooms": 1
     },
     {
       "id": "8",
-      "name": "Osiedle Bezpieczne Miasta",
+      "name": "Willa Łódź",
       "city": "Łódź",
       "state": "Łódzkie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/saru-robert-9rP3mxf8qWI-unsplash.jpg",
-      "wifi": false,
-      "price": 160000,
+      "photos": [
+        "/public/uploads/9.jpg"
+      ],
+      "wifi": true,
+      "price": 1600,
       "area": 60,
       "number_of_bedrooms": 2,
       "number_of_bathrooms": 1
@@ -113,12 +131,46 @@
       "name": "Willa Szczecin",
       "city": "Szczecin",
       "state": "Zachodniopomorskie",
-      "photo": "https://angular.dev/assets/images/tutorials/common/webaliser-_TPTXZd9mOo-unsplash.jpg",
+      "photos": [
+        "/public/uploads/10.jpg"
+      ],
       "wifi": true,
-      "price": 300000,
+      "price": 3000,
       "area": 120,
       "number_of_bedrooms": 4,
       "number_of_bathrooms": 3
+    },
+    {
+      "id": "10",
+      "name": "Willa siema",
+      "city": "Radom",
+      "state": "Radom",
+      "price": 1000,
+      "photos": [
+        "/public/uploads/1736433086104-827749074.jpg",
+        "/public/uploads/1736433129867-387588514.jpg"
+      ],
+      "area": 100,
+      "number_of_bedrooms": 2,
+      "number_of_bathrooms": 2,
+      "wifi": true
+    },
+    {
+      "id": "11",
+      "name": "Willa Elo",
+      "city": "Stare Budy Radziejowskie",
+      "state": "Radziejowice",
+      "price": 4269,
+      "photos": [
+        "/public/uploads/1736434444444-449286780.jpg",
+        "/public/uploads/1736434450252-532081340.jpg",
+        "/public/uploads/1736434455543-416504689.jpg",
+        "/public/uploads/1736434467710-238494023.jpg"
+      ],
+      "area": 420,
+      "number_of_bedrooms": 69,
+      "number_of_bathrooms": 44,
+      "wifi": true
     }
   ]
 }

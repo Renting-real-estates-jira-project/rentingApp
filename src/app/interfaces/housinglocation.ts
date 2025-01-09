@@ -1,0 +1,12 @@
+export interface HousingLocation {
+  id: string;
+  name: string;
+  city: string;
+  state: string;
+  price: number;
+  photos: string[];
+  area: number;
+  number_of_bedrooms: number;
+  number_of_bathrooms: number;
+  wifi: boolean;
+}

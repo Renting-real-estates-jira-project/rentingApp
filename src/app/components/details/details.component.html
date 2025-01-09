@@ -1,0 +1,137 @@
+<article class="listing-container">
+  <div class="listing-info">
+    <div class="listing-header">
+      <div class="listing-photo-grid">
+        <img
+          *ngFor="let photo of housingLocation?.photos"
+          class="listing-photo"
+          [src]="getPhotoUrl(photo)"
+          alt="Exterior photo of {{ housingLocation?.name }}"
+          crossorigin
+        />
+      </div>
+      <div class="listing-description">
+        <h1 class="listing-heading">{{ housingLocation?.name }}</h1>
+        <p class="listing-location">
+          {{ housingLocation?.city }}, {{ housingLocation?.state }}
+        </p>
+      </div>
+    </div>
+
+    <section class="listing-details">
+      <h2 class="section-heading">Property Details</h2>
+      <div class="details-grid">
+        <div class="detail-item">
+          <span class="detail-label">Rental Price</span>
+          <span class="detail-value">{{ housingLocation?.price | currency: 'USD' }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Area</span>
+          <span class="detail-value">{{ housingLocation?.area }} m²</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Bedrooms</span>
+          <span class="detail-value">{{ housingLocation?.number_of_bedrooms }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Bathrooms</span>
+          <span class="detail-value">{{ housingLocation?.number_of_bathrooms }}</span>
+        </div>
+      </div>
+    </section>
+
+	<section class="listing-features">
+      <h2 class="section-heading">Amenities</h2>
+      <ul class="amenities-list">
+        <li>
+          <span
+            class="amenity-icon"
+            [class.available]="housingLocation?.wifi"
+          >
+            {{ housingLocation?.wifi ? "✓" : "✗" }}
+          </span>
+          WiFi Available
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="application-form">
+    <section class="listing-apply">
+      <h2 class="section-heading">Apply now to live here</h2>
+      <form [formGroup]="applyForm">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input
+            id="first-name"
+            type="text"
+            placeholder="Jan"
+            formControlName="firstName"
+            [class.invalid]="applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.touched"
+          />
+          <div
+            class="error-message"
+            *ngIf="applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.touched"
+          >
+            First name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input
+            id="last-name"
+            type="text"
+            placeholder="Kowalski"
+            formControlName="lastName"
+            [class.invalid]="applyForm.get('lastName')?.invalid && applyForm.get('lastName')?.touched"
+          />
+          <div
+            class="error-message"
+            *ngIf="applyForm.get('lastName')?.invalid && applyForm.get('lastName')?.touched"
+          >
+            Last name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="kontakt@jankowalski.pl"
+            formControlName="email"
+            [class.invalid]="applyForm.get('email')?.invalid && applyForm.get('email')?.touched"
+          />
+          <div
+            class="error-message"
+            *ngIf="applyForm.get('email')?.invalid && applyForm.get('email')?.touched"
+          >
+            Please enter a valid email address
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            id="phone"
+            type="tel"
+            placeholder="123456789"
+            formControlName="phone"
+            [class.invalid]="applyForm.get('phone')?.invalid && applyForm.get('phone')?.touched"
+          />
+          <div
+            class="error-message"
+            *ngIf="applyForm.get('phone')?.invalid && applyForm.get('phone')?.touched"
+          >
+            Please enter a valid phone number
+          </div>
+        </div>
+
+        <button type="submit" class="primary" [disabled]="!applyForm.valid">
+          Apply now
+        </button>
+      </form>
+    </section>
+  </div>
+</article>

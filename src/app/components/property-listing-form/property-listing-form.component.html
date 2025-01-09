@@ -1,0 +1,144 @@
+<div class="listing-form-container">
+  <header class="form-header">
+    <h1>List Your Property</h1>
+    <p class="subtitle">
+      Fill in the details below to create your property listing
+    </p>
+  </header>
+
+  <form
+    [formGroup]="listingForm"
+    (submit)="submitApplication($event)"
+    class="listing-form"
+  >
+    <!-- Basic Information section remains unchanged -->
+    <div class="form-section">
+      <h2>Basic Information</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="propertyName">Property Name</label>
+          <input
+            id="propertyName"
+            type="text"
+            formControlName="name"
+            placeholder="Enter property name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="propertyCity">City</label>
+          <input
+            id="propertyCity"
+            type="text"
+            formControlName="city"
+            placeholder="Enter city"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="propertyState">State</label>
+          <input
+            id="propertyState"
+            type="text"
+            formControlName="state"
+            placeholder="Enter state"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="propertyPrice">Price</label>
+          <div class="price-input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input
+              id="propertyPrice"
+              type="number"
+              formControlName="price"
+              placeholder="Enter price"
+              required
+              min="0"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Details section remains unchanged -->
+    <div class="form-section">
+      <h2>Property Details</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="propertyArea">Area (m²)</label>
+          <input
+            id="propertyArea"
+            type="number"
+            formControlName="area"
+            placeholder="Enter area"
+            required
+            min="0"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="numberOfBedrooms">Bedrooms</label>
+          <input
+            id="numberOfBedrooms"
+            type="number"
+            formControlName="number_of_bedrooms"
+            placeholder="Number of bedrooms"
+            required
+            min="0"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="numberOfBathrooms">Bathrooms</label>
+          <input
+            id="numberOfBathrooms"
+            type="number"
+            formControlName="number_of_bathrooms"
+            placeholder="Number of bathrooms"
+            required
+            min="0"
+          />
+        </div>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" formControlName="wifi" />
+          <span class="checkbox-text">WiFi Available</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Updated Property Photos section -->
+    <div class="form-section">
+      <h2>Property Photos</h2>
+      <app-upload (imageUploaded)="onImageUploaded($event)"></app-upload>
+      
+      <div class="uploaded-photos" *ngIf="listingForm.get('photos')?.value?.length">
+        <h4>Uploaded Photos:</h4>
+        <div class="photos-grid">
+          <div class="photo-item" *ngFor="let photo of listingForm.get('photos')?.value; let i = index">
+            <img [src]="'http://localhost:3000' + photo" [alt]="'Property photo ' + (i + 1)" />
+            <button type="button" class="remove-photo" (click)="removeImage(i)">
+              <span class="remove-icon">×</span>
+            </button>
+          </div>
+        </div>
+        <div class="photo-count" *ngIf="listingForm.get('photos')?.value?.length">
+          {{ listingForm.get('photos')?.value?.length }} / {{ maxFiles }} photos uploaded
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="submit-button" [disabled]="!listingForm.valid">
+        List Property
+      </button>
+    </div>
+  </form>
+</div>
